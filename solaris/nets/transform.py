@@ -55,12 +55,14 @@ from albumentations.augmentations import functional as F
 from albumentations.augmentations.functional import preserve_channel_dim
 from albumentations.core.transforms_interface import DualTransform, to_tuple, \
     ImageOnlyTransform, NoOp
-from albumentations.augmentations.transforms import Crop, VerticalFlip,       \
-    HorizontalFlip, Flip, Transpose, Resize, CenterCrop, RandomCrop, Cutout,  \
-    RandomSizedCrop, OpticalDistortion, GridDistortion, ElasticTransform,     \
-    Normalize, HueSaturationValue, RGBShift, RandomBrightnessContrast,        \
-    Blur, MotionBlur, MedianBlur, GaussNoise, CLAHE, RandomGamma, ToFloat,    \
-    RandomRotate90, PadIfNeeded
+from albumentations.augmentations.geometric.transforms import ElasticTransform, VerticalFlip, \
+    HorizontalFlip, Flip, Transpose, OpticalDistortion, GridDistortion, PadIfNeeded
+from albumentations.augmentations.transforms import Normalize, RandomGamma, \
+    HueSaturationValue, RGBShift, GaussNoise, CLAHE, ToFloat, RandomBrightnessContrast
+from albumentations.augmentations.dropout.cutout import Cutout
+from albumentations.augmentations.geometric.rotate import Rotate, RandomRotate90
+from albumentations.augmentations.geometric.resize import RandomScale, Resize
+from albumentations.augmentations.crops.transforms import Crop, CenterCrop, RandomCrop, RandomSizedCrop
 from albumentations.core.composition import Compose, OneOf, OneOrOther
 
 
